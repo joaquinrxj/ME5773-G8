@@ -1,0 +1,16 @@
+Starting job - Thu Feb 8 18:55:18 CST 2024
+Waiting for all executions to complete
+Hello amp587! You are successfully running a bash script file
+Hello amp587! You are successfully running a bash script file
+Hello amp587! You are successfully running a bash script file
+Hello amp587! You are successfully running a bash script file
+Terminated a task that takes 2 seconds
+Hello amp587! You are successfully running a bash script file
+Terminated a task that takes 4 seconds
+Hello amp587! You are successfully running a bash script file
+Terminated a task that takes 6 seconds
+Terminated a task that takes 10 seconds
+Terminated a task that takes 14 seconds
+Terminated a task that takes 12 seconds
+Calculations ended
+Total CPU time 16125 [ms]

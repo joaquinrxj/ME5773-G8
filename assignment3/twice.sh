@@ -30,7 +30,7 @@ N=$((N * 2))
 
 
 
-# A simple process to stop processing for 10 seconds
+# A simple process to stop processing for N seconds
 sleep ${N}
 
 echo Terminated a task that takes ${N} seconds
