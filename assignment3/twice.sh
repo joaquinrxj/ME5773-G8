@@ -15,9 +15,10 @@
 #   Use it at your own risk.
 # 
 #
-# Authors: Mauricio Aristizabal, PhD
+# Authors: Joaquin Rodriguez
+#	   Juan Camilo Velasquez
 #
-# Last modification date: 01/26/2024
+# Last modification date: 02/06/2024
 # Version: 0.1
 # ====================================================================== 
 

@@ -22,10 +22,11 @@
 #   Use it at your own risk.
 # 
 #
-# Authors: Mauricio Aristizabal, PhD
+# Authors: Joaquin Rodriguez
+#	   Juan Camilo Velasquez
 #
-# Last modification date: 01/28/2024
-# Version: 0.2
+# Last modification date: 02/06/2024
+# Version: 0.1
 # ====================================================================== 
 
 echo The input Number was: $1
