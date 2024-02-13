@@ -1,0 +1,9 @@
+# This file may be used to create an environment using:
+# $ conda create --name envTeam8 --file environment.yml
+# platform: linux-64
+python=3.10
+numpy
+scipy
+numexpr
+conda-forge::gmsh=4.12
+conda-forge::tensorflow=2.15
