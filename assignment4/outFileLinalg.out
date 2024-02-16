@@ -1,0 +1,61 @@
+Starting job - Fri Feb 16 10:18:57 CST 2024
+--------------------------------
+Execution with MKL_NUM_THREADS=1
+N =  10000
+Time elapsed Creating Arrays: 0.178705454 seconds
+Time elapsed Solving: 8.319249392 seconds
+Solution Vector =  [1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+Last Element of Solution Vector (U_n) =  1.0000000000123226
+Executing Python Script
+--------------------------------
+Execution with MKL_NUM_THREADS=2
+N =  10000
+Time elapsed Creating Arrays: 0.154216051 seconds
+Time elapsed Solving: 4.036933899 seconds
+Solution Vector =  [1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+Last Element of Solution Vector (U_n) =  1.0000000000123226
+Executing Python Script
+--------------------------------
+Execution with MKL_NUM_THREADS=4
+N =  10000
+Time elapsed Creating Arrays: 0.161966562 seconds
+Time elapsed Solving: 2.326923370 seconds
+Solution Vector =  [1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+Last Element of Solution Vector (U_n) =  1.0000000000123226
+Executing Python Script
+--------------------------------
+Execution with MKL_NUM_THREADS=8
+N =  10000
+Time elapsed Creating Arrays: 0.164715528 seconds
+Time elapsed Solving: 1.411990166 seconds
+Solution Vector =  [1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+Last Element of Solution Vector (U_n) =  1.0000000000123226
+Executing Python Script
+--------------------------------
+Execution with MKL_NUM_THREADS=16
+N =  10000
+Time elapsed Creating Arrays: 0.162374496 seconds
+Time elapsed Solving: 1.027826309 seconds
+Solution Vector =  [1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+Last Element of Solution Vector (U_n) =  1.0000000000123226
+Executing Python Script
+--------------------------------
+Execution with MKL_NUM_THREADS=20
+N =  10000
+Time elapsed Creating Arrays: 0.160376549 seconds
+Time elapsed Solving: 1.000637293 seconds
+Solution Vector =  [1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+Last Element of Solution Vector (U_n) =  1.0000000000123226
+Executing Python Script
+--------------------------------
+Execution with MKL_NUM_THREADS=40
+N =  10000
+Time elapsed Creating Arrays: 0.160034418 seconds
+Time elapsed Solving: 0.999438763 seconds
+Solution Vector =  [1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+Last Element of Solution Vector (U_n) =  1.0000000000123226
+Executing Python Script
+All executions complete
+--------------------------------
+Calculations ended
+Total CPU time 24642 [ms]
