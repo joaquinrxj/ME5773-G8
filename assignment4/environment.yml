@@ -1,5 +1,5 @@
-# This file may be used to create an environment using :
-# $ conda create --name envTeam8 --file environment.yml
+# This file may be used to create an environment using:
+# $ conda create -n envTeam8 -f environment.yml
 # platform: linux-64
 name: envTeam8
 channels:
@@ -10,6 +10,7 @@ dependencies:
   - numpy
   - scipy
   - numexpr
+  - pip
   - pip:
       - gmsh
   - tensorflow=2.15
