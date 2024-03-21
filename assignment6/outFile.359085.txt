@@ -1,0 +1,6 @@
+Starting job - Wed Mar 20 18:03:45 CDT 2024
+ Process ID executing the main thread 273812
+ OS cpu_count: 80
+ multiprocessing cpu_count: 80
+ Using SLURM defined NProc = 8
+Number of Degrees of freedom: 50000

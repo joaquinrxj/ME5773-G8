@@ -1,0 +1,12 @@
+Starting job - Wed Mar 20 18:43:50 CDT 2024
+ Process ID executing the main thread 279857
+ OS cpu_count: 80
+ multiprocessing cpu_count: 80
+ Using SLURM defined NProc = 8
+Number of Degrees of freedom: 3
+[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+Total time to assemble: 0.036600589752197266
+Calculations ended
+Total CPU time 878 [ms]

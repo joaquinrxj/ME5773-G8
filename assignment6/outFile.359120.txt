@@ -1,0 +1,29 @@
+Starting job - Wed Mar 20 19:31:58 CDT 2024
+ Process ID executing the main thread 241754
+ OS cpu_count: 80
+ multiprocessing cpu_count: 80
+ Using SLURM defined NProc = 8
+Number of Degrees of freedom: 3
+[(array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]]), array([0., 0., 0.])), (array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]]), array([0., 0., 0.])), (array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]]), array([0., 0., 0.])), (array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]]), array([0., 0., 0.])), (array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]]), array([0., 0., 0.])), (array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]]), array([0., 0., 0.])), (array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]]), array([0., 0., 0.])), (array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]]), array([0., 0., 0.]))]
+[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+Total time to assemble: 0.08733797073364258
+Calculations ended
+Total CPU time 2912 [ms]
