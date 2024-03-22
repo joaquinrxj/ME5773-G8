@@ -28,8 +28,8 @@
 #SBATCH -e errFilesparse.txt    # Name of 'stderr' error file.
 #SBATCH -p compute1          # Partition
 #SBATCH -N 1                 # Total number of nodes to be requested.
-#SBATCH -n 1                 # Total number of tasks to be requested.
-#SBATCH -c 40                 # Number of threads used by each task.
+#SBATCH -n 40                 # Total number of tasks to be requested.
+#SBATCH -c 1                 # Number of threads used by each task.
 #SBATCH -t 10:00:00          # Maximum estimated run time (dd-hh:mm:ss)
 #SBATCH --mail-type=ALL      # Mail events to notify (END, FAIL, ALL).
 #SBATCH --mail-user your_@email.edu # Put your utsa-email here.
@@ -44,7 +44,6 @@ echo Starting job - `date`
 module load anaconda3
 source activate hpc
 
-export SLURM_NTASKS=40
 
 # Runing the python script.
 python3 FE_system_sparse_group08.py

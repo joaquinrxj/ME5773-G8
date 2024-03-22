@@ -1,6 +1,21 @@
-Starting job - Wed Mar 20 20:24:58 CDT 2024
- Process ID executing the main thread 250325
+Starting job - Fri Mar 22 11:18:05 CDT 2024
+ Process ID executing the main thread 86501
  OS cpu_count: 80
  multiprocessing cpu_count: 80
- Using SLURM defined NProc = 40
+ Using SLURM defined NProc = 10
 Number of Degrees of freedom: 50000
+Began Assembly of the System of Equations
+Paralell Pool Created
+Information Mapped to all the workers for the assembly
+Each worker completed execution
+The assembled Matrix is
+[[ 1. -1.  0. ...  0.  0.  0.]
+ [-1.  2. -1. ...  0.  0.  0.]
+ [ 0. -1.  2. ...  0.  0.  0.]
+ ...
+ [ 0.  0.  0. ...  2. -1.  0.]
+ [ 0.  0.  0. ... -1.  2. -1.]
+ [ 0.  0.  0. ...  0. -1.  1.]]
+Total time to assemble: 371.08705949783325 , Nproc= 10
+Calculations ended
+Total CPU time 373974 [ms]

@@ -43,8 +43,8 @@ def assembleParallel(args):
 
 		"""
 	Ne1, Ne2, k_list, Ndof = args
-	Kg_cpus=np.zeros((Ndof,Ndof))
-	Kg_cpus = spr.lil_array(Kg_cpus)
+	# Kg_cpus=np.zeros()
+	Kg_cpus = spr.lil_matrix((Ndof,Ndof))
 	fg_cpus = np.zeros((Ndof,))
 
 	for e in range( Ne1, Ne2):
@@ -58,6 +58,7 @@ def assembleParallel(args):
 			for j in range(2):
 				Kg_cpus[e+i,e+j] = Kg_cpus[e+i,e+j] + Ke[i,j]
 			fg_cpus[e+i] = fg_cpus[e+i] + fe[i]
+	Kg_cpus = spr.csr_matrix(Kg_cpus)
 
 	return Kg_cpus,fg_cpus
 			# end for 
@@ -121,8 +122,8 @@ def elasticFEProblem( Ndof, Ne1, Ne2, k_list,NProc ):
 	p = mproc.Pool( processes = NProc ) # Number of processes created
 
 	# Create the global matrix.
-	Kg = np.zeros((Ndof,Ndof))
-	Kg = spr.lil_array(Kg)
+	# Kg = np.zeros((Ndof,Ndof))
+	Kg = spr.csr_matrix((Ndof,Ndof))
 	fg = np.zeros((Ndof,))
 
 	Ne = len(k_list) # Number of elements.
@@ -147,8 +148,8 @@ def elasticFEProblem( Ndof, Ne1, Ne2, k_list,NProc ):
 		Kg +=Kg_cpus
 		fg += fg_cpus
 
-		p.close()
-
+	p.close()
+	t_end   = time.time()
 
 	return Kg, fg
 
@@ -164,12 +165,12 @@ if __name__ == '__main__':
 
 	# Get number of processors from SLURM_NTASKS
 	NProc = int(os.environ['SLURM_NTASKS'])
+	# NProc = int(os.environ['SLURM_CPUS_PER_TASK'])
 	print(' Using SLURM defined NProc = {}'.format(NProc) )
 
 
-
 	# Total number of degrees of freedom to be generated
-	Ndof = 1000
+	Ndof = 500000
 	Ne   = Ndof-1 # number of elements.
 
 	print('Number of Degrees of freedom: {0}'.format(Ndof))
@@ -189,7 +190,7 @@ if __name__ == '__main__':
 	Kg, fg = elasticFEProblem( Ndof, 0, Ne, k_list,NProc ) 
 
 	t_end   = time.time()
-	print(Kg)
+	# print(Kg)
 
 	print('Total time to assemble:',t_end-t_start)
 

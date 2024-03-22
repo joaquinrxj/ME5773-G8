@@ -114,9 +114,6 @@ def elasticFEProblem( Ndof, Ne1, Ne2, k_list,NProc ):
         -fg: (Float array, Shape: (2,) )  Global force vector.
 
         """
-	# Create Parallel Pool
-
-	p = mproc.Pool( processes = NProc ) # Number of processes created
 
 	# Create the global matrix.
 	Kg = np.zeros((Ndof,Ndof))
@@ -129,7 +126,6 @@ def elasticFEProblem( Ndof, Ne1, Ne2, k_list,NProc ):
 
 	res=Ne % NProc
 
-
 	args = []
 	start_index = 0
 	for i in range(NProc):
@@ -138,8 +134,13 @@ def elasticFEProblem( Ndof, Ne1, Ne2, k_list,NProc ):
 		args.append((start_index, end_index, k_list, Ndof))
 		start_index = end_index  # Update start index
 
-	
+	# Create Parallel Pool
+	print('Paralell Pool Created')
+	p = mproc.Pool( processes = NProc ) # Number of processes created
+
+	print('Information Mapped to all the workers for the assembly')
 	output=p.map(assembleParallel,args)
+	print('Each worker completed execution')
 	for Kg_cpus, fg_cpus in output:
 		Kg +=Kg_cpus
 		fg += fg_cpus
@@ -160,7 +161,9 @@ if __name__ == '__main__':
 	print(" multiprocessing cpu_count: {0}".format(mproc.cpu_count()))
 
 	# Get number of processors from SLURM_NTASKS
+	# NProc = int(os.environ['SLURM_CPUS_PER_TASK'])
 	NProc = int(os.environ['SLURM_NTASKS'])
+	
 	print(' Using SLURM defined NProc = {}'.format(NProc) )
 
 
@@ -183,11 +186,13 @@ if __name__ == '__main__':
 	t_start = time.time()
 	
 	# Create the global system
+	print('Began Assembly of the System of Equations')
 	Kg, fg = elasticFEProblem( Ndof, 0, Ne, k_list,NProc ) 
 
 	t_end   = time.time()
+	print('The assembled Matrix is')
 	print(Kg)
 
-	print('Total time to assemble:',t_end-t_start)
+	print('Total time to assemble:',t_end-t_start,', Nproc=',NProc)
 
 # end if __main__
