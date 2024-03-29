@@ -1,0 +1,15 @@
+#!/bin/bash
+##
+#SBATCH --job-name=integral_mpi
+#SBATCH --output=out.ext
+#SBATCH --output=out.ext
+#SBATCH --partition=compute1
+#SBATCH --time=00:10:00
+#SBATCH --mail-type=ALL
+#SBATCH --ntasks=21
+#SBATCH --nodes=1
+
+# Load one of these
+module load anaconda3
+#module load mpich
+mpirun -n $SLURM_NTASKS python3 homework7_group8.py
