@@ -1,40 +1,22 @@
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   c026
+  Local host:   c042
   Local device: mlx5_0
 --------------------------------------------------------------------------
-Process 14 starts
-Process 7 starts
-Process 19 starts
-Process 8 starts
-Process 12 starts
-Process 10 starts
-Process 2 starts
-Process 17 starts
-Process 3 starts
-Total Numer of Workers = 21
-21
-Process 6 starts
-Process 13 starts
-Process 20 starts
-Process 18 starts
-Process 16 starts
+Process 1 starts
+Total Numer of Workers = 3
+3
 Master sent quadrature to process 1
-Process 5 starts
-Process 9 starts
-Process 11 starts
-Process 15 starts
 Master sent quadrature to process 2
-Process 4 starts
 Master sent quadrature to process 3
 Master sent quadrature to process 4
 Master sent quadrature to process 5
 Master sent quadrature to process 6
 Master sent quadrature to process 7
 Master sent quadrature to process 8
-Process 1 starts
 Master sent quadrature to process 9
+Process 2 starts
 Master sent quadrature to process 10
 Master sent quadrature to process 11
 Master sent quadrature to process 12
@@ -46,26 +28,30 @@ Master sent quadrature to process 17
 Master sent quadrature to process 18
 Master sent quadrature to process 19
 Master sent quadrature to process 20
+Master sent quadrature to process 21
 Master received value 0.0 from process 1
 Master received value 0.7043259094830925 from process 2
-Master received value 0.7353621441608531 from process 3
-Master received value 0.735756506760854 from process 4
-Master received value 0.7357588740610974 from process 5
-Master received value 0.7357588823240081 from process 6
-Master received value 0.7357588823428544 from process 7
-Master received value 0.7357588823428858 from process 8
-Master received value 0.7357588823428856 from process 9
-Master received value 0.7357588823428838 from process 10
-Master received value 0.7357588823428844 from process 11
-Master received value 0.7357588823428843 from process 12
-Master received value 0.7357588823428842 from process 13
-Master received value 0.7357588823428853 from process 14
-Master received value 0.7357588823428833 from process 15
-Master received value 0.7357588823428847 from process 16
-Master received value 0.7357588823428844 from process 17
-Master received value 0.7357588823428844 from process 18
-Master received value 0.7357588823428849 from process 19
-Master received value 0.7357588823428851 from process 20
-Finish in 0.006 seconds
-[c026:112156] 20 more processes have sent help message help-mpi-btl-openib.txt / error in device init
-[c026:112156] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Master received value 0.7353621441608531 from process 1
+Master received value 0.735756506760854 from process 2
+Master received value 0.7357588740610974 from process 1
+Master received value 0.7357588823240081 from process 2
+Master received value 0.7357588823428544 from process 1
+Master received value 0.7357588823428858 from process 2
+Master received value 0.7357588823428856 from process 1
+Master received value 0.7357588823428838 from process 2
+Master received value 0.7357588823428844 from process 1
+Master received value 0.7357588823428843 from process 2
+Master received value 0.7357588823428842 from process 1
+Master received value 0.7357588823428853 from process 2
+Master received value 0.7357588823428833 from process 1
+Master received value 0.7357588823428847 from process 2
+Master received value 0.7357588823428844 from process 1
+Master received value 0.7357588823428844 from process 2
+Master received value 0.7357588823428849 from process 1
+Master received value 0.7357588823428851 from process 2
+Master received value 0.7357588823428854 from process 1
+Finish in 0.011 seconds
+[c042:292213] 2 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[c042:292213] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+slurmstepd: error: *** JOB 364816 ON c042 CANCELLED AT 2024-03-29T17:01:41 ***
+slurmstepd: error: *** JOB 364815 ON c042 CANCELLED AT 2024-03-29T17:01:41 ***

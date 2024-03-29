@@ -28,7 +28,7 @@ if rank == 0:
     # Loop over all tasks to send the quadrature
     available_workers = list(range(1, size))
     num_gauss=20
-    for i in range(1,20+1):
+    for i in range(1,num_gauss+2):
         x = [0.0] * i
         w = [0.0] * i
         x1, x2 = -1.0, 1.0
