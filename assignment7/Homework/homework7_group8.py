@@ -47,10 +47,11 @@ if rank == 0:
 
     # Print results table
 
-    with open('part1.txt', 'w') as f:
+    with open('part2.txt', 'w') as f:
         f.write("Quadrature no.\tIntegration Result\tPercent error %\tRun time (s)\n")
-        for i in range(1,size):
-            f.write(f"{i}\t\t{integral[i-1]:<15}\t\t{err[i-1]:<15}%\t\t{time_int[i-1]:<15}\n")
+        for i in range(1,len(integral)):
+            f.write(f"{i}\t\t\t\t{integral[i-1]:<15.16}\t\t\t\t{err[i-1]:<15.16}%\t\t\t\t{time_int[i-1]:<15.16}\n")
+
 
     # Integral complete
     finish = time.perf_counter()
