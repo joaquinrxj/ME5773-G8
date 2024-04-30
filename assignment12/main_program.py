@@ -50,16 +50,16 @@ void defK( double* K, int ncols, int nrows) {
         if (i == j) {
             // Last diagonal element condition
             if (i == nrows - 1) {
-                K_p[g_index] = 2.0;
+                K[g_indx] = 2.0;
             } else {
-                K_p[g_index] = 4.0;
+                K[g_indx] = 4.0;
             }
         } else if ((i == j + 1) || (i == j - 1)) {
             // Direct neighbors of diagonal elements
-            K_p[g_index] = -2.0;
+            K[g_indx] = -2.0;
         } else {
             // All other elements
-            K_p[g_index] = 0.0;
+            K[g_indx] = 0.0;
         }
         
     }
@@ -72,11 +72,11 @@ void defK( double* K, int ncols, int nrows) {
 # types as in the raw kernel.
 
 t_start = time.time()
-N = 10
+N = 30000
 
 K = cp.empty((N,N),dtype = cp.float64)
-f=cp.zeros((N,1),dtype = cp.float64)
-f[-1,1]=1.0/N
+f = cp.zeros((N,1),dtype = cp.float64)
+f[-1,0]=1.0/N
 
 # Define the execution grid.
 block_dim = 16
@@ -92,6 +92,30 @@ print(u)
 t_end = time.time()
 
 # Check the values in the matrix:
-print(I)
+print(K)
 
-print(f"Time spent creating the matrix: {t_end-t_start:.6f} s")
+print(f"Time spent creating the matrix, and solving system of equations Cupy: {t_end-t_start:.6f} s")
+
+
+## Numpy Section
+t_start = time.time()
+K = np.zeros((N,N),dtype = np.float64)
+f = np.zeros((N,1),dtype = np.float64)
+f[-1,0] = 1.0/N
+
+for i in range(N):
+    if (i==N-1):
+        K[i,i] = 2.0
+    else:
+        K[i,i] = 4.0
+        K[i,i+1] =-2.0
+        K[i+1,i]=-2.0
+# Solution to system of equations
+u=np.linalg.solve(K,f)
+print(u)
+t_end = time.time()
+
+# Check the values in the matrix:
+print(K)
+
+print(f"Time spent creating the matrix, and solving system of equations Numpy: {t_end-t_start:.6f} s")
